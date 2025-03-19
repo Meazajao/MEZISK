@@ -1,59 +1,84 @@
-.hero {
-    height: 100vh;
-    background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+.hero{
+    min-height: 100vh;
+    background:  linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 9%;
 }
-
-.hero-left {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    padding-left: 180px;
+.hero-left{
     line-height: 1.1;
 }
-
-.hero-left h2 {
+.hero-left h2{
     color: #090909;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 18px;
 }
 
-.hero-left p {
+.hero-left p{
     color: #171717;
-    font-size: 70px;
-    font-weight: 500;
+    font-size: 80px;   
+    font-weight: 700;
 }
-
-.hand-hand-icon {
+.hero-hand-icon{
     display: flex;
     align-items: center;
     gap: 20px;
 }
-
-.hand-hand-icon img {
-    width: 85px;
+.hero-hand-icon img{
+    width: 70px;
 }
-
-.hero-latest-btn {
+.hero-latest-btn{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
-    width: 260px;
+    width: 250px;
     height: 60px;
     border-radius: 75px;
-    margin-top: 30px;
+    margin-top: 20px;
     background: #ff4141;
     color: white;
-    font-size: 18px;
-    font-weight: 500px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.hero-latest-btn img{
+    width: 18px;
 }
 
-.hero-right {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hero-right img{
+    width: 450px;
+}
+
+@media (max-width: 1024px) { /* Anpassar för iPad och mindre skärmar */
+    .hero {
+        padding: 10px 5%;
+    }
+    .hero-left p {
+        font-size: 60px;
+    }
+    .hero-right img {
+        width: 380px;
+    }
+}
+
+@media (max-width: 768px) { /* Anpassar för mobiler och små surfplattor */
+    .hero {
+        padding: 25px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
+    .hero-left p {
+        font-size: 50px;
+    }
+   
+    .hero-left h2 {
+        margin-bottom: 15px;
+    }
+
+    .hero-latest-btn {
+        margin-top: 25px;
+    }
 }
