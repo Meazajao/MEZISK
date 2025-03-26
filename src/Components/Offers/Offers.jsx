@@ -1,16 +1,16 @@
-import './Offers.css'
+import styles from './Offers.module.css'
 import exclusive_imgae from '../../Assets/exclusive_image.png'
 
 const Offers = () => {
   return (
-    <div className='offers'>
-      <div className="offers-left">
+    <div className={styles.offers}>
+      <div className={styles.offers_left}>
         <h2>Exclusive</h2>
         <h2>Offers For You</h2>
         <p>ONLY ON BEST SELLERS PRODUCTS</p>
         <button>Check Now</button>
       </div>
-      <div className="offers-right">
+      <div className={styles.offers_right}>
         <img src={exclusive_imgae} alt="" />
       </div>
     </div>

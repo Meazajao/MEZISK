@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Navbar.css';
+import styles from './Navbar.module.css';
 import logo from '../../Assets/logo.png';
 import cart_icon from '../../Assets/cart_icon.png';
 import { Link } from 'react-router-dom';
@@ -8,13 +8,13 @@ const Navbar = () => {
   const [menu, setMenu] = useState("shop");
 
   return (
-    <div className="navbar">
-      <div className="nav-logo">
-        <img src={logo} className="logo-pic" alt="logo" />
+    <div className={styles.navbar}>
+      <div className={styles.nav_logo}>
+        <img src={logo} className={styles.logo_pic} alt="logo" />
         <p>MEZISK</p>
       </div>
 
-      <ul className="nav-menu">
+      <ul className={styles.nav_menu}>
         <li onClick={() => setMenu("shop")}>
           <Link style={{textDecoration: 'none'}} to="/">Shop</Link>
           {menu === "shop" && <hr />}
@@ -33,14 +33,14 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <div className="nav-login-cart">
+      <div className={styles.nav_login_cart}>
         <Link to="/login">
           <button>Login</button>
         </Link>
         <Link to="/cart">
-          <img src={cart_icon} className="cart-icon-pic" alt="cart icon" />
+          <img src={cart_icon} className={styles.cart_icon_pic} alt="cart icon" />
         </Link>
-        <div className="nav-cart-count">0</div>
+        <div className={styles.nav_cart_count}>0</div>
       </div>
     </div>
   );

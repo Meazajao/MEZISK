@@ -1,8 +1,8 @@
-import './NewsLetter.css'
+import styles from './NewsLetter.module.css'
 
 const NewsLetter = () => {
   return (
-    <div className='newsletter'>
+    <div className={styles.newsletter}>
       <h2>Get Exclusive Offers On Your Email</h2>
       <p>Subscribe to our news letter and stay upated</p>
       <div>

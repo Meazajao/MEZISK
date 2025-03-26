@@ -21,7 +21,7 @@
     background: #252525;
 }
 
-.popular-item {
+.popular_item {
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;

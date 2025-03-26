@@ -6,28 +6,28 @@
     justify-content: space-between;
     padding: 10px 9%;
 }
-.hero-left{
+.hero_left{
     line-height: 1.1;
 }
-.hero-left h2{
+.hero_left h2{
     color: #090909;
     font-size: 18px;
 }
 
-.hero-left p{
+.hero_left p{
     color: #171717;
     font-size: 80px;   
     font-weight: 700;
 }
-.hero-hand-icon{
+.hero_hand_icon{
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.hero-hand-icon img{
+.hero_hand_icon img{
     width: 70px;
 }
-.hero-latest-btn{
+.hero_latest_btn{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,17 +36,18 @@
     height: 60px;
     border-radius: 75px;
     margin-top: 20px;
-    background: #b80287;
+    background:_;
     color: white;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
 }
-.hero-latest-btn img{
+
+.hero_latest_btn img{
     width: 18px;
 }
 
-.hero-right img{
+.hero_right img{
     width: 450px;
 }
 
@@ -54,10 +55,10 @@
     .hero {
         padding: 10px 5%;
     }
-    .hero-left p {
+    .hero_left p {
         font-size: 60px;
     }
-    .hero-right img {
+    .hero_right img {
         width: 380px;
     }
 }
@@ -71,20 +72,20 @@
         text-align: center;
     }
 
-    .hero-hand-icon {
+    .hero_hand_icon {
         display: flex;
         justify-content: center;
     }
 
-    .hero-left p {
+    .hero_left p {
         font-size: 40px;
     }
    
-    .hero-left h2 {
+    .hero_left h2 {
         margin-bottom: 15px;
     }
 
-    .hero-latest-btn {
+    .hero_latest_btn {
         margin-top: 25px;
     }
 }
