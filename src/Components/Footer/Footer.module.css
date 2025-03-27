@@ -1,20 +1,86 @@
 .footer {
+    padding: 60px 20px 30px;
+    font-family: 'Karla', sans-serif;
+    color: #1a1a1a;
+  }
+  
+  .footerTop {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 50px;
-}
-
-.footer-logo {
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logoSection {
     display: flex;
     align-items: center;
+    gap: 15px;
+  }
+  
+  .logoImage {
+    width: 60px;
+    height: auto;
+  }
+  
+  .logoSection p {
+    font-size: 25px;
+    font-weight: bold;
+    color: #111;
+  }
+  
+  .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navLinks li {
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .navLinks li:hover {
+    color: #ff4c60;
+  }
+  
+  .socials {
+    display: flex;
     gap: 20px;
-}
-
-.footer-logo p {
-    color: #383838;
-    font-size: 46px;
-    font-weight: 700;
-}
-
+  }
+  
+  .socials img {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .socials img:hover {
+    transform: scale(1.1);
+  }
+  
+  .footerBottom {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .footerBottom hr {
+    width: 80%;
+    margin: 0 auto 20px;
+    border: none;
+    height: 2px;
+    background-color: #dcdcdc;
+    border-radius: 4px;
+  }
+  
+  .footerBottom p {
+    font-size: 14px;
+    color: #555;
+  }
+  
