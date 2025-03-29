@@ -1,20 +1,21 @@
-import styles from './Item.module.css'
+import styles from './Item.module.css';
 
-const Item = (props) => {
+const Item = ({ image, name, new_price, old_price }) => {
   return (
     <div className={styles.item}>
-      <img src={props.image} alt="" />
-      <p>{props.name}</p>
+      <img src={image} alt={name} />
+      <p>{name}</p>
+      
       <div className={styles.item_prices}>
         <div className={styles.item_price_new}>
-            ${props.new_price}
+          ${new_price}
         </div>
         <div className={styles.item_price_old}>
-            ${props.old_price}
+          ${old_price}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Item
+export default Item;
