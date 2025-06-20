@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styles from './Navbar.module.css';
 import logo from '../../Assets/logo.png';
 import cart_icon from '../../Assets/cart_icon.png';
@@ -6,43 +6,61 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <div className={styles.navbar}>
-      <div className={styles.nav_logo}>
-        <img src={logo} className={styles.logo_pic} alt="logo" />
+    <nav className={styles.navbar}>
+      
+      <Link to="/" className={styles.nav_logo} onClick={() => setMenu("shop")}>
+        <img src={logo} alt="logo" />
         <p>MEZISK</p>
+      </Link>
+
+    
+      <div
+        className={`${styles.burger} ${isOpen ? styles.open : ''}`}
+        onClick={toggleMenu}
+      >
+        <span className={styles.line}></span>
+        <span className={styles.line}></span>
+        <span className={styles.line}></span>
       </div>
 
-      <ul className={styles.nav_menu}>
+    
+      <ul className={`${styles.nav_menu} ${isOpen ? styles.nav_menu_visible : ''}`}>
         <li onClick={() => setMenu("shop")}>
-          <Link style={{textDecoration: 'none'}} to="/">Shop</Link>
+          <Link to="/">Shop</Link>
           {menu === "shop" && <hr />}
         </li>
         <li onClick={() => setMenu("mens")}>
-          <Link style={{textDecoration: 'none'}} to="/mens">Men</Link>
+          <Link to="/mens">Men</Link>
           {menu === "mens" && <hr />}
         </li>
         <li onClick={() => setMenu("womens")}>
-          <Link style={{textDecoration: 'none'}} to="/womens">Women</Link>
+          <Link to="/womens">Women</Link>
           {menu === "womens" && <hr />}
         </li>
         <li onClick={() => setMenu("kids")}>
-          <Link style={{textDecoration: 'none'}} to="/kids">Kids</Link>
+          <Link to="/kids">Kids</Link>
           {menu === "kids" && <hr />}
         </li>
       </ul>
 
+     
       <div className={styles.nav_login_cart}>
         <Link to="/login">
           <button>Login</button>
         </Link>
         <Link to="/cart">
-          <img src={cart_icon} className={styles.cart_icon_pic} alt="cart icon" />
+          <img src={cart_icon} alt="cart icon" />
         </Link>
         <div className={styles.nav_cart_count}>0</div>
       </div>
-    </div>
+    </nav>
   );
 };
 

@@ -83,4 +83,30 @@
     font-size: 14px;
     color: #555;
   }
+
+  @media (max-width: 768px) {
+    .footerTop {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .navLinks {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .logoSection {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .socials {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+  
   
